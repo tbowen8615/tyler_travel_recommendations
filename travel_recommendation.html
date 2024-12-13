@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyler's Travels</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('travel_website.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        /* Hero section styling */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            padding: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            max-width: 800px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black; /* Navbar background color */
+            padding: 10px 40px; /* Space from edges */
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Search bar container styling */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 25px;
+            padding: 5px 10px;
+            max-width: 400px; /* Use max-width instead of a fixed width */
+            width: 100%;
+        }
+        .search-bar input[type="text"] {
+            border: none;
+            outline: none;
+            padding: 5px 10px;
+            font-size: 1rem;
+            flex: 1;
+            border-radius: 25px;
+        }
+        .search-bar button {
+            background-color: darkgreen; /* Button color */
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            margin-left: 5px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .search-bar button:hover {
+            background-color: #006400; /* Slightly darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <!-- Logo and Website Name -->
+        <div class="logo">
+            <span style="font-weight: bold; font-size: 20px;">Tyler's Travels</span>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Search Bar and Buttons -->
+        <div class="search-bar">
+            <input type="text" placeholder="Enter a destination or keyword" id="searchInput">
+            <button class="search" onclick="performSearch()">Search</button>
+            <button class="reset" onclick="resetSearch()">Clear</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Explore Dream Destinations</h1>
+        <p>Welcome to Tyler's Travels! Your ultimate guide to discovering the most breathtaking places around the world. 
+           From pristine beaches to historic landmarks, we are here to help you plan your next adventure.</p>
+    </div>
+
+    <script>
+        function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            if (query.trim()) {
+                alert(`Searching for: ${query}`);
+            } else {
+                alert("Please enter a keyword to search.");
+            }
+        }
+
+        function resetSearch() {
+            document.getElementById('searchInput').value = '';
+        }
+    </script>
+</body>
+</html>
