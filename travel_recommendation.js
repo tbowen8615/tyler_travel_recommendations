@@ -20,8 +20,6 @@ fetch('travel_recommendation_api.json')
 function performSearch() {
     const query = document.getElementById('searchInput').value.trim().toLowerCase();
 
-    // Check if query matches "beach", "temple", or "country" keywords
-    // We'll consider plural forms as well, so we check if the query includes the singular form.
     let category = null;
     if (query.includes('beach')) {
         category = 'beaches';
@@ -41,45 +39,34 @@ function performSearch() {
     }
 
     if (!category) {
-        // If no matching category, inform the user
         resultsContainer.innerHTML = '<p>No matching results found. Try "beach", "temple", or "country".</p>';
         return;
     }
 
-    // Extract the relevant array from travelData based on the category
     const recommendations = travelData[category];
     if (!recommendations || recommendations.length === 0) {
         resultsContainer.innerHTML = '<p>No recommendations available for this category.</p>';
         return;
     }
 
-    // We want at least two recommendations
+    // Show at least two recommendations or fewer if less than two exist
     const displayCount = Math.min(2, recommendations.length);
 
     for (let i = 0; i < displayCount; i++) {
         const rec = recommendations[i];
 
-        // If category is "countries", we have an array of countries, each with cities.
-        // For beaches and temples, we have a direct array.
-        // Countries have a structure: { "id": ..., "name": ..., "cities": [...] }
-        // We want to display a place name, image, and description.
-        // For countries, let's pick from its "cities" array. For simplicity, pick the first city.
         if (category === 'countries') {
             const firstCity = rec.cities && rec.cities.length > 0 ? rec.cities[0] : null;
             if (firstCity) {
                 createRecommendationCard(firstCity.name, firstCity.imageUrl, firstCity.description, resultsContainer);
-            } else {
-                // If no city data, skip
-                continue;
             }
         } else {
-            // Temples and beaches have the structure { "id":..., "name":..., "imageUrl":..., "description":... }
             createRecommendationCard(rec.name, rec.imageUrl, rec.description, resultsContainer);
         }
     }
 }
 
-// Helper function to create a recommendation card and append it to the results container
+// Helper function to create a recommendation card
 function createRecommendationCard(title, imageUrl, description, container) {
     const card = document.createElement('div');
     card.style.border = '1px solid #ccc';
