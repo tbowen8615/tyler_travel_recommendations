@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: black; /* Navbar background color */
-    padding: 10px 40px; /* Space from edges */
+    padding: 10px 0px; /* Space from edges */
     color: white;
     position: fixed;
     width: 100%;
