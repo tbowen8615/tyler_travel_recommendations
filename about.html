@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tyler's Travels - About Us</title>
     <link rel="stylesheet" href="travel_recommendation.css">
+    <style>
+        /* Inline adjustments for layout brevity */
+        body {
+            overflow: hidden; /* Prevent scrolling if content fits in one screen */
+        }
+        .content {
+            margin-top: 80px; /* Reduced margin to make more space visible */
+            padding: 20px;
+        }
+        .content h1 {
+            margin-bottom: 10px;
+            font-size: 2rem; /* Slightly smaller heading */
+        }
+        .content p {
+            font-size: 1rem; /* Slightly smaller text */
+            line-height: 1.3;
+            margin: 10px 0;
+        }
+        .team-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+        .team-member {
+            width: 30%;
+            text-align: left;
+        }
+        .team-member h2 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        .team-member p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        .role {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -21,8 +62,34 @@
 
     <div class="content">
         <h1>About Us</h1>
-        <p>At Tyler's Travels, we are passionate explorers dedicated to helping you discover the world’s most remarkable destinations. Our team scours the globe to bring you curated travel recommendations, ensuring that your journeys are filled with unforgettable experiences.<br><br>
-        From guiding you to iconic landmarks and hidden gems, to providing insights into local cultures and cuisines, we strive to be your trusted companion in crafting the perfect adventure.</p>
+        <p>At Tyler's Travels, we help you uncover the world's hidden treasures. Our team curates travel recommendations to ensure your adventures are truly memorable. Let us guide you to must-see landmarks, unique cultures, and delicious cuisines to make your journeys unforgettable.</p>
+    </div>
+
+    <!-- Our Team Section -->
+    <div class="content">
+        <h1>Our Team</h1>
+        <div class="team-section">
+            <!-- Tyler Brown - CEO -->
+            <div class="team-member">
+                <div class="role">CEO</div>
+                <h2>Tyler Brown</h2>
+                <p>Leads strategic direction and partnerships to ensure remarkable traveler experiences.</p>
+            </div>
+
+            <!-- Alicia Martin - CFO -->
+            <div class="team-member">
+                <div class="role">CFO</div>
+                <h2>Alicia Martin</h2>
+                <p>Oversees financial planning, ensuring efficient use of resources and long-term stability.</p>
+            </div>
+
+            <!-- John Doe - COO -->
+            <div class="team-member">
+                <div class="role">COO</div>
+                <h2>John Doe</h2>
+                <p>Manages daily operations, optimizing processes for seamless, quality travel services.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Social Icons Section -->
