@@ -67,7 +67,7 @@
             background-color: white;
             border-radius: 25px;
             padding: 5px 10px;
-            max-width: 400px; /* Use max-width instead of a fixed width */
+            max-width: 400px;
             width: 100%;
         }
         .search-bar input[type="text"] {
@@ -90,6 +90,22 @@
         }
         .search-bar button:hover {
             background-color: #006400; /* Slightly darker green on hover */
+        }
+
+        /* Social icons container */
+        .social-icons {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Space between icons */
+            z-index: 999;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -121,6 +137,14 @@
         <h1>Explore Dream Destinations</h1>
         <p>Welcome to Tyler's Travels! Your ultimate guide to discovering the most breathtaking places around the world. 
            From pristine beaches to historic landmarks, we are here to help you plan your next adventure.</p>
+    </div>
+    
+    <!-- Social Icons Section -->
+    <div class="social-icons">
+        <a href="#"><img src="X_icon.jpg" alt="X Logo"></a>
+        <a href="#"><img src="instagram.jpg" alt="Instagram Logo"></a>
+        <a href="#"><img src="facebook.jpg" alt="Facebook Logo"></a>
+        <a href="#"><img src="youtube.jpg" alt="YouTube Logo"></a>
     </div>
 
     <script>
