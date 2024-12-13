@@ -1,0 +1,126 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('travel_website.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black; /* Navbar background color */
+    padding: 10px 40px; /* Space from edges */
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+.navbar .logo span {
+    font-weight: bold; 
+    font-size: 20px;
+}
+
+/* Search bar container styling (on the home page) */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    max-width: 400px;
+    width: 100%;
+}
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    flex: 1;
+    border-radius: 25px;
+}
+.search-bar button {
+    background-color: darkgreen; /* Button color */
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    margin-left: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.search-bar button:hover {
+    background-color: #006400; /* Slightly darker green on hover */
+}
+
+/* Hero section styling (on the home page) */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+}
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+.hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    max-width: 800px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Page Content Container (for About and Contact pages) */
+.content {
+    margin-top: 100px; /* To ensure content is below the navbar */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Social icons container */
+.social-icons {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between icons */
+    z-index: 999;
+}
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
