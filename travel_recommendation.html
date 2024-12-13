@@ -36,6 +36,9 @@
            From pristine beaches to historic landmarks, we are here to help you plan your next adventure.</p>
     </div>
     
+    <!-- Results Container -->
+    <div class="results-container" style="padding: 20px;"></div>
+    
     <!-- Social Icons Section -->
     <div class="social-icons">
         <a href="#"><img src="X_icon.jpg" alt="X Logo"></a>
@@ -45,19 +48,5 @@
     </div>
 
     <script src="travel_recommendation.js"></script>
-    <script>
-        function performSearch() {
-            const query = document.getElementById('searchInput').value;
-            if (query.trim()) {
-                alert(`Searching for: ${query}`);
-            } else {
-                alert("Please enter a keyword to search.");
-            }
-        }
-
-        function resetSearch() {
-            document.getElementById('searchInput').value = '';
-        }
-    </script>
 </body>
 </html>
